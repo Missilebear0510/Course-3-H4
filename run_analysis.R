@@ -2,14 +2,12 @@ cat("\014")
 
 source("F:\\DataScience\\Course 3\\H4FunCombine.R")
 source("F:\\DataScience\\Course 3\\H4FunExtract.R")
-#Combine()
+Combine()
 dir="Combine"
 sExtract="Extract.txt"
-#Extract(dir,sExtract)
+Extract(dir,sExtract)
 
- 
 dat<-read.table(sExtract)
-#print(str(dat))
 
 dat1=split(dat,as.factor(dat[,1]))
 
