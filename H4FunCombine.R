@@ -1,7 +1,7 @@
-Combine<-function()
+Combine<-function(dir)
 {
-  if(!dir.exists("Combine")){
-    dir.create("Combine")
+  if(!dir.exists(dir)){
+    dir.create(dir)
   }
   dir1="UCI HAR Dataset\\train\\Inertial Signals"
   dir2="UCI HAR Dataset\\test\\Inertial Signals"
