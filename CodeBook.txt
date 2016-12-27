@@ -1,46 +1,82 @@
-run_analysis.R 
-dir 
-Directory to store combined data set from raw data 
-sExtract
-File to store extracted information on mean and sd for each measurement
-sTidy
-File to store final output of clean data
-
-H4FunCombine.R 
-Combine<-function(dir)
-{
-  Combinefile(dir1,dir2)
-  function to combine raw data from training and test cases
-  dir1 directory to store raw data of training cases
-  dir2 directory to store raw data of test cases
-  
-  CombineSubAct(dir1,dir2,sf)
-  function to combine information on "subject" and "activity" from training and test cases
-  dir1 directory to store information on "subject" and "activity" of training cases
-  dir2 directory to store information on "subject" and "activity" of test cases
-  sf file to store combined information on "subject" and "activity" of training and test cases 
-}
-
-
-H4FunExtract.R 
-
-Extract<-function(dir,sExtract)
-{
-  
-  First to change names for activity from number to character
-  
-  Extractfile(dir,dat)
-  Function to extract mean and sd of each measurement,
-  also match subject and activity for each measurement 
-  dir directory to store combined raw data from traning and test
-  dat data frame contains subject,activity and extracted 
-  mean and sd of each measurement
-}
-
-
-H4FunTidyData.R 
-GenTiday(sExtract,sTidy)
-Function to generate tidy data set for average mean and sd of measurement,
-for each subject and activity
-sExtract File to store extracted information on mean and sd for each measurement
-sTidy    final tidy data set
+General description of the tidy dataset:
+Row number: 180 = 30 subjects x 6 activity (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, and LAYING)
+column number: 79 for measurement of
+"tBodyAcc.mean()-X" 
+"tBodyAcc.mean()-Y" 
+"tBodyAcc.mean()-Z" 
+"tGravityAcc.mean()-X" 
+"tGravityAcc.mean()-Y" 
+"tGravityAcc.mean()-Z" 
+"tBodyAccJerk.mean()-X" 
+"tBodyAccJerk.mean()-Y" 
+"tBodyAccJerk.mean()-Z" 
+"tBodyGyro.mean()-X" 
+"tBodyGyro.mean()-Y" 
+"tBodyGyro.mean()-Z" 
+"tBodyGyroJerk.mean()-X" 
+"tBodyGyroJerk.mean()-Y" 
+"tBodyGyroJerk.mean()-Z" 
+"tBodyAccMag.mean()" 
+"tGravityAccMag.mean()" 
+"tBodyAccJerkMag.mean()" 
+"tBodyGyroMag.mean()" 
+"tBodyGyroJerkMag.mean()" 
+"fBodyAcc.mean()-X" 
+"fBodyAcc.mean()-Y" 
+"fBodyAcc.mean()-Z" 
+"fBodyAcc.meanFreq()-X" 
+"fBodyAcc.meanFreq()-Y" 
+"fBodyAcc.meanFreq()-Z" 
+"fBodyAccJerk.mean()-X" 
+"fBodyAccJerk.mean()-Y" 
+"fBodyAccJerk.mean()-Z" 
+"fBodyAccJerk.meanFreq()-X" 
+"fBodyAccJerk.meanFreq()-Y" 
+"fBodyAccJerk.meanFreq()-Z" 
+"fBodyGyro.mean()-X" 
+"fBodyGyro.mean()-Y" 
+"fBodyGyro.mean()-Z" 
+"fBodyGyro.meanFreq()-X" 
+"fBodyGyro.meanFreq()-Y" 
+"fBodyGyro.meanFreq()-Z" 
+"fBodyAccMag.mean()" 
+"fBodyAccMag.meanFreq()" 
+"fBodyBodyAccJerkMag.mean()" 
+"fBodyBodyAccJerkMag.meanFreq()" 
+"fBodyBodyGyroMag.mean()" 
+"fBodyBodyGyroMag.meanFreq()" 
+"fBodyBodyGyroJerkMag.mean()" 
+"fBodyBodyGyroJerkMag.meanFreq()" 
+"tBodyAcc.std()-X" 
+"tBodyAcc.std()-Y" 
+"tBodyAcc.std()-Z" 
+"tGravityAcc.std()-X" 
+"tGravityAcc.std()-Y" 
+"tGravityAcc.std()-Z" 
+"tBodyAccJerk.std()-X" 
+"tBodyAccJerk.std()-Y" 
+"tBodyAccJerk.std()-Z" 
+"tBodyGyro.std()-X" 
+"tBodyGyro.std()-Y" 
+"tBodyGyro.std()-Z" 
+"tBodyGyroJerk.std()-X" 
+"tBodyGyroJerk.std()-Y" 
+"tBodyGyroJerk.std()-Z" 
+"tBodyAccMag.std()" 
+"tGravityAccMag.std()" 
+"tBodyAccJerkMag.std()" 
+"tBodyGyroMag.std()" 
+"tBodyGyroJerkMag.std()" 
+"fBodyAcc.std()-X" 
+"fBodyAcc.std()-Y" 
+"fBodyAcc.std()-Z" 
+"fBodyAccJerk.std()-X" 
+"fBodyAccJerk.std()-Y" 
+"fBodyAccJerk.std()-Z" 
+"fBodyGyro.std()-X" 
+"fBodyGyro.std()-Y" 
+"fBodyGyro.std()-Z" 
+"fBodyAccMag.std()" 
+"fBodyBodyAccJerkMag.std()" 
+"fBodyBodyGyroMag.std()" 
+"fBodyBodyGyroJerkMag.std()"
